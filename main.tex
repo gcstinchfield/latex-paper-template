@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+
+% spacing
+\usepackage{setspace}
+\usepackage[margin=1.25in]{geometry}
+\onehalfspacing
+
+% line numbers
+\usepackage{lineno}
+\usepackage{hyperref}
+\linenumbers
+
+% bibliography
+\usepackage{natbib}
+\bibliographystyle{chicago}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{ {./graphics/} }
+\usepackage{caption}
+\usepackage{subcaption}
+
+% organizing into separate .txt files
+\usepackage{blindtext}
+\usepackage{subfiles}
+
+% math formatting
+\usepackage{amsmath}
+
+\title{Title}
+\date{}
+
+\author[1]{Georgia Stinchfield}
+\author[2]{Author Two}
+\author[1]{Carl D. Laird}
+
+\affil[1]{Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh, Pennsylvannia, USA, 15213}
+\affil[2]{Some other place}
+\affil[*]{Address correspondence to: claird@andrew.cmu.edu}
+
+\begin{document}
+
+\maketitle
+
+\subfile{sections/_abstract}
+\subfile{sections/1_introduction.tex}
+
+% bibiliography
+\bibliography{reference.bib}
+
+\end{document}
